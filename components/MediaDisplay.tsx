@@ -205,9 +205,6 @@ export function MediaDisplay({ data, loading }: MediaDisplayProps) {
                                 </>
                             )}
                         </button>
-                        <button className="flex items-center justify-center w-full py-4 px-4 bg-background border-2 border-primary/20 hover:border-primary/50 text-foreground font-semibold rounded-xl hover:bg-accent/50 transition-colors">
-                            Save to Device
-                        </button>
                     </div>
                 </div>
             </div>
