@@ -27,7 +27,7 @@ export async function POST(request: Request) {
             );
         }
 
-        const response = await fetch(`${apiUrl}/api/video/info`, {
+        const response = await fetch(apiUrl, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

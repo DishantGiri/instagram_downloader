@@ -11,16 +11,16 @@ export async function POST(request: Request) {
             );
         }
 
-        const apiUrl = process.env.API_BASE_URL;
+        const downloadUrl = process.env.API_DOWNLOAD_URL;
 
-        if (!apiUrl) {
+        if (!downloadUrl) {
             return NextResponse.json(
-                { error: 'API configuration missing' },
+                { error: 'Download API configuration missing' },
                 { status: 500 }
             );
         }
 
-        const response = await fetch(`${apiUrl}/api/video/download`, {
+        const response = await fetch(downloadUrl, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
