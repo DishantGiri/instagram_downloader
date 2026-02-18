@@ -38,10 +38,10 @@ export default function BlogPage() {
                             Latest Updates
                         </div>
                         <h1 className="text-4xl md:text-5xl font-black tracking-tight">
-                            InstaSave <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-indigo-500">Blog</span>
+                            InstaSave <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-indigo-500">Insights</span>
                         </h1>
                         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-                            Tips, tricks, and insights for mastering your social media game.
+                            Expert strategies, platform updates, and deep dives into the world of digital content curation.
                         </p>
                     </div>
 
@@ -83,7 +83,7 @@ export default function BlogPage() {
                         </div>
                     ) : (
                         <div className="text-center py-20 bg-white/5 rounded-3xl border border-white/10 backdrop-blur-sm">
-                            <p className="text-muted-foreground text-lg italic">Articles coming soon. Stay tuned!</p>
+                            <p className="text-muted-foreground text-lg italic">Our editorial team is crafting fresh guides. Check back shortly for updates.</p>
                         </div>
                     )}
 

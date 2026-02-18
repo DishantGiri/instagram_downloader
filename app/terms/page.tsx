@@ -22,56 +22,55 @@ export default function TermsPage() {
 
                     <div className="prose prose-invert max-w-none space-y-6 text-muted-foreground leading-relaxed">
                         <section className="space-y-4">
-                            <h2 className="text-2xl font-bold text-foreground">1. Acceptance of Terms</h2>
+                            <h2 className="text-2xl font-bold text-foreground">1. Protocol Agreement</h2>
                             <p>
-                                By accessing and using InstaSave, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to these terms, please do not use our service.
+                                Accessing InstaSave signifies your voluntary agreement to these stipulations. If you dissent from any portion of these terms, you are advised to discontinue use immediately.
                             </p>
                         </section>
 
                         <section className="space-y-4">
-                            <h2 className="text-2xl font-bold text-foreground">2. Use License</h2>
+                            <h2 className="text-2xl font-bold text-foreground">2. Grant of License</h2>
                             <p>
-                                InstaSave grants you a personal, non-exclusive, non-transferable license to use our service for personal, non-commercial purposes only. You may download content from public Instagram accounts for your own personal use.
+                                We extend a revocable, non-exclusive license for you to utilize InstaSave for private, non-commercial archiving. This privilege is limited to content sourced from publicly accessible profiles.
                             </p>
                         </section>
 
                         <section className="space-y-4">
-                            <h2 className="text-2xl font-bold text-foreground">3. Restrictions</h2>
-                            <p>You are specifically restricted from:</p>
+                            <h2 className="text-2xl font-bold text-foreground">3. Prohibited Conduct</h2>
+                            <p>Users are strictly forbidden from:</p>
                             <ul className="list-disc list-inside space-y-2 ml-4">
-                                <li>Using our service for any commercial purpose</li>
-                                <li>Downloading content from private accounts without authorization</li>
-                                <li>Redistributing downloaded content without proper attribution</li>
-                                <li>Using downloaded content in violation of copyright laws</li>
-                                <li>Attempting to reverse engineer or compromise our service</li>
+                                <li>Exploiting the service for commercial gain or revenue generation</li>
+                                <li>Circumventing privacy controls to access restricted content</li>
+                                <li>Distributing copyrighted material without explicit authorization</li>
+                                <li>Engaging in reverse engineering or infrastructure attacks</li>
                             </ul>
                         </section>
 
                         <section className="space-y-4">
-                            <h2 className="text-2xl font-bold text-foreground">4. Intellectual Property</h2>
+                            <h2 className="text-2xl font-bold text-foreground">4. Intellectual Rights</h2>
                             <p>
-                                All content downloaded through InstaSave remains the property of the original creators. We do not claim ownership of any content. Users are responsible for respecting intellectual property rights and obtaining necessary permissions.
+                                InstaSave acts solely as a conduit. We claim no ownership over the media processed. The original creators retain full copyright and ownership. Users maintain the burden of ensuring their usage aligns with intellectual property laws.
                             </p>
                         </section>
 
                         <section className="space-y-4">
-                            <h2 className="text-2xl font-bold text-foreground">5. Disclaimer</h2>
+                            <h2 className="text-2xl font-bold text-foreground">5. Service Warranty</h2>
                             <p>
-                                InstaSave is provided "as is" without any warranties. We do not guarantee uninterrupted service or error-free operation. We are not responsible for any damages arising from the use of our service.
+                                This tool is offered on an "as-available" basis. We disclaim all warranties, express or implied, regarding uptime, speed, or specific fitness for a particular purpose.
                             </p>
                         </section>
 
                         <section className="space-y-4">
-                            <h2 className="text-2xl font-bold text-foreground">6. Limitation of Liability</h2>
+                            <h2 className="text-2xl font-bold text-foreground">6. Liability Limitations</h2>
                             <p>
-                                InstaSave shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use the service.
+                                Under no circumstances shall InstaSave be held accountable for incidental or consequential damages arising from the utilization or inability to utilize our platform.
                             </p>
                         </section>
 
                         <section className="space-y-4">
-                            <h2 className="text-2xl font-bold text-foreground">7. Changes to Terms</h2>
+                            <h2 className="text-2xl font-bold text-foreground">7. Terms Modification</h2>
                             <p>
-                                We reserve the right to modify these terms at any time. Continued use of the service after changes constitutes acceptance of the new terms.
+                                We retain the authority to revise these terms at our discretion. Continued interaction with the site post-modification implies acceptance of the revised protocols.
                             </p>
                         </section>
                     </div>

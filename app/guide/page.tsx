@@ -9,29 +9,29 @@ export default function GuidePage() {
     const steps = [
         {
             id: 1,
-            title: "Copy Instagram Link",
-            description: "Open the Instagram app or website, find the video, reel, or story you want to download, and tap the 'Share' (paper plane) button. Then select 'Copy Link'.",
+            title: "Acquire the Link",
+            description: "Launch Instagram, navigate to the target post (Reel, Video, or Photo), tap the options menu (three dots or paper plane), and select 'Copy Link'.",
             icon: <Link2 className="w-5 h-5" />,
             color: "from-pink-500 to-rose-500"
         },
         {
             id: 2,
-            title: "Paste the Link",
-            description: "Go to InstaSave.com and paste the copied link into the input box at the top of the page.",
+            title: "Input URL",
+            description: "Return to our platform and insert the copied URL into the designated search bar at the top of the interface.",
             icon: <Play className="w-5 h-5" />,
             color: "from-rose-500 to-orange-500"
         },
         {
             id: 3,
-            title: "Process Video",
-            description: "Click the 'Download' button. Our system will analyze the link and generate high-quality download options instantly.",
+            title: "Initialize Search",
+            description: "Hit the 'Analyze' button to trigger our backend engine, which will fetch the media metadata in seconds.",
             icon: <ArrowRight className="w-5 h-5" />,
             color: "from-orange-500 to-amber-500"
         },
         {
             id: 4,
-            title: "Download Now",
-            description: "Choose your preferred quality and click the 'Download Video' button to save it to your device without watermark.",
+            title: "Secure Your File",
+            description: "Select your desired resolution and format, then press 'Download' to save the pristine file directly to your local storage.",
             icon: <Download className="w-5 h-5" />,
             color: "from-amber-500 to-yellow-500"
         }
@@ -53,13 +53,13 @@ export default function GuidePage() {
                 <div className="text-center mb-16 max-w-3xl mx-auto space-y-4">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/50 border border-border/50 text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-4">
                         <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                        Step-by-Step Guide
+                        User Manual
                     </div>
                     <h1 className="text-4xl md:text-6xl font-black tracking-tight mb-4">
-                        How to <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">Download Instagrams</span>
+                        Your Guide to <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">Archiving Media</span>
                     </h1>
                     <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-                        Learn how to use InstaSave to save your favorite videos, reels, and stories in high quality without watermarks.
+                        Master the art of saving high-fidelity content from Instagram with our simple, transparent workflow.
                     </p>
                 </div>
 
@@ -100,14 +100,14 @@ export default function GuidePage() {
                             <div className="w-10 h-10 rounded-lg bg-orange-400/10 text-pink-500 flex items-center justify-center">
                                 <Smartphone className="w-5 h-5" />
                             </div>
-                            <h3 className="text-xl font-bold">On Mobile</h3>
+                            <h3 className="text-xl font-bold">Smartphones (iOS/Android)</h3>
                         </div>
                         <ul className="space-y-3">
                             {[
-                                "Open Instagram App and find the post.",
-                                "Tap share icon and copy link.",
-                                "Open Chrome or Safari and visit InstaSave.",
-                                "Paste and download directly to Gallery."
+                                "Locate the post in the Instagram App.",
+                                "Tap the share/options icon and 'Copy Link'.",
+                                "Switch to your preferred mobile browser (Safari/Chrome).",
+                                "Paste on InstaSave and download to your Camera Roll/Gallery."
                             ].map((item, i) => (
                                 <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
                                     <div className="mt-1 w-4 h-4 rounded-full bg-green-500/20 text-green-500 flex items-center justify-center flex-shrink-0">
@@ -127,14 +127,14 @@ export default function GuidePage() {
                             <div className="w-10 h-10 rounded-lg bg-purple-400/10 text-purple-500 flex items-center justify-center">
                                 <Monitor className="w-5 h-5" />
                             </div>
-                            <h3 className="text-xl font-bold">On Desktop</h3>
+                            <h3 className="text-xl font-bold">Desktop / Laptop</h3>
                         </div>
                         <ul className="space-y-3">
                             {[
-                                "Right click on any post to copy link.",
-                                "Or copy URL from browser address bar.",
-                                "Open InstaSave and paste the URL.",
-                                "Save high-quality MP4 files to your drive."
+                                "Navigate to the post on instagram.com.",
+                                "Copy the URL from the browser's address bar.",
+                                "Paste the URL into the InstaSave input field.",
+                                "Download the MP4/JPG file to your hard drive."
                             ].map((item, i) => (
                                 <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
                                     <div className="mt-1 w-4 h-4 rounded-full bg-green-500/20 text-green-500 flex items-center justify-center flex-shrink-0">

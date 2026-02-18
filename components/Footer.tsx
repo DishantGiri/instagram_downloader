@@ -27,7 +27,7 @@ export function Footer() {
                             </div>
                         </div>
                         <p className="text-sm text-muted-foreground leading-relaxed">
-                            Fast, free, and easy way to download Instagram videos without watermarks.
+                            Efficiently archive your favorite social media moments in pristine quality, directly to your device.
                         </p>
                     </div>
 
@@ -69,7 +69,7 @@ export function Footer() {
                 {/* Bottom Disclaimer */}
                 <div className="pt-8 border-t border-white/5">
                     <p className="text-xs text-muted-foreground leading-relaxed text-center max-w-5xl mx-auto">
-                        InstaSave is a public, link-based downloader for publicly accessible content. We do not host videos. No login required. Download only content you own or have permission to use. Not affiliated with Instagram or Meta Platforms Ltd.
+                        This tool allows you to save publicly available content for personal archiving. We are an independent entity and hold no official association with Instagram or Meta Platforms. Please ensure you have the right to download any media you process.
                     </p>
                     <p className="text-xs text-muted-foreground text-center mt-4">
                         &copy; {new Date().getFullYear()} InstaSave. All rights reserved.

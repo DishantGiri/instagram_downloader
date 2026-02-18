@@ -22,13 +22,13 @@ export default function ContactPage() {
                     <div className="text-center space-y-4">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/50 border border-border/50 text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">
                             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                            We're Here to Help
+                            Customer Service
                         </div>
                         <h1 className="text-4xl md:text-6xl font-black tracking-tight">
-                            Contact <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">Us</span>
+                            Get in <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">Touch</span>
                         </h1>
                         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-                            Have a question, issue, or feature request? We'd love to hear from you.
+                            Whether you're facing technical hurdles or have a suggestion to improve our platform, our team is ready to assist.
                         </p>
                     </div>
 
@@ -40,12 +40,12 @@ export default function ContactPage() {
                             <div className="w-12 h-12 rounded-xl bg-orange-400/10 text-pink-500 flex items-center justify-center">
                                 <Mail className="w-6 h-6" />
                             </div>
-                            <h3 className="text-2xl font-bold">Email Support</h3>
+                            <h3 className="text-2xl font-bold">Direct Correspondence</h3>
                             <a href="mailto:support@instasave.com" className="text-pink-500 hover:underline text-lg font-medium block">
                                 support@instasave.com
                             </a>
                             <p className="text-muted-foreground">
-                                For general inquiries and technical support
+                                For all technical assistance, bug reports, and partnership opportunities.
                             </p>
                         </div>
 
@@ -54,15 +54,14 @@ export default function ContactPage() {
                             <div className="w-12 h-12 rounded-xl bg-purple-400/10 text-purple-500 flex items-center justify-center">
                                 <Clock className="w-6 h-6" />
                             </div>
-                            <h3 className="text-2xl font-bold">Response Time</h3>
+                            <h3 className="text-2xl font-bold">Estimated Turnaround</h3>
                             <p className="text-lg font-medium text-foreground">
-                                Usually within 24–48 hours
+                                Typically under 24 hours
                             </p>
                             <p className="text-muted-foreground">
-                                We aim to respond to all inquiries as quickly as possible
+                                Our support team operates globally to ensure timely resolutions.
                             </p>
                         </div>
-
                     </div>
 
                     {/* Report an Issue Section */}

@@ -22,72 +22,72 @@ export default function PrivacyPage() {
 
                     <div className="prose prose-invert max-w-none space-y-6 text-muted-foreground leading-relaxed">
                         <section className="space-y-4">
-                            <h2 className="text-2xl font-bold text-foreground">1. Information We Collect</h2>
+                            <h2 className="text-2xl font-bold text-foreground">1. Data Minimization</h2>
                             <p>
-                                InstaSave is designed with privacy in mind. We do not require user registration or login. We do not collect, store, or track personal information about our users.
+                                At InstaSave, privacy isn't an afterthought—it's our foundation. We operate on a strict "no-knowledge" basis, meaning we do not mandate accounts, login credentials, or personal identifiers. Your interaction with our tool remains completely anonymous.
                             </p>
                         </section>
 
                         <section className="space-y-4">
-                            <h2 className="text-2xl font-bold text-foreground">2. Usage Data</h2>
+                            <h2 className="text-2xl font-bold text-foreground">2. Analytics & Improvement</h2>
                             <p>
-                                We may collect anonymous usage statistics to improve our service, including:
+                                To enhance platform performance, we may aggregate non-identifiable technical data. This helps us optimize load times and server response. This includes:
                             </p>
                             <ul className="list-disc list-inside space-y-2 ml-4">
-                                <li>Browser type and version</li>
-                                <li>Operating system</li>
-                                <li>General geographic location (country level)</li>
-                                <li>Pages visited and features used</li>
+                                <li>Browser environment specs</li>
+                                <li>Device operating system</li>
+                                <li>Regional usage patterns (non-specific)</li>
+                                <li>Interaction metrics</li>
                             </ul>
-                            <p>This data is aggregated and cannot be used to identify individual users.</p>
+                            <p>This information is purely statistical and cannot re-identify any individual user.</p>
                         </section>
 
                         <section className="space-y-4">
-                            <h2 className="text-2xl font-bold text-foreground">3. Download History</h2>
+                            <h2 className="text-2xl font-bold text-foreground">3. Zero-Retention Policy</h2>
                             <p>
-                                We do not store your download history. All downloads are processed in real-time and no record is kept on our servers.
+                                We do not archive your activity. Once your download is processed and delivered, the link between our server and your session dissolves. We maintain no logs of the content you access.
                             </p>
                         </section>
 
                         <section className="space-y-4">
-                            <h2 className="text-2xl font-bold text-foreground">4. Cookies</h2>
+                            <h2 className="text-2xl font-bold text-foreground">4. Local Storage</h2>
                             <p>
-                                We use minimal cookies necessary for the website to function properly. These cookies do not track personal information and are used solely for technical purposes such as maintaining your theme preference.
+                                We utilize local storage (cookies) sparingly, solely to remember your interface preferences (such as light/dark mode). These are stored locally on your device and are never transmitted to external servers.
                             </p>
                         </section>
 
                         <section className="space-y-4">
-                            <h2 className="text-2xl font-bold text-foreground">5. Third-Party Services</h2>
+                            <h2 className="text-2xl font-bold text-foreground">5. External Interactions</h2>
                             <p>
-                                Our service may use third-party analytics tools to understand usage patterns. These services have their own privacy policies governing the use of your information.
+                                While we strive for independence, certain analytical tools may be employed to gauge site traffic. These third-party providers operate under their own independent privacy frameworks.
                             </p>
                         </section>
 
                         <section className="space-y-4">
-                            <h2 className="text-2xl font-bold text-foreground">6. Data Security</h2>
+                            <h2 className="text-2xl font-bold text-foreground">6. Security Protocols</h2>
                             <p>
-                                We implement appropriate security measures to protect against unauthorized access, alteration, disclosure, or destruction of data. However, no method of transmission over the internet is 100% secure.
+                                We deploy industry-standard encryption and security practices to safeguard data transmission. While the digital landscape dictates that absolute security is theoretical, we aggressively mitigate risks to protect your experience.
                             </p>
                         </section>
 
                         <section className="space-y-4">
-                            <h2 className="text-2xl font-bold text-foreground">7. Children's Privacy</h2>
+                            <h2 className="text-2xl font-bold text-foreground">7. Age Usage Restrictions</h2>
                             <p>
-                                Our service is not directed to children under 13. We do not knowingly collect information from children under 13.
+                                InstaSave is intended for a general audience and is not designed for individuals under the age of 13. We do not knowingly facilitate interaction with minors.
                             </p>
                         </section>
 
                         <section className="space-y-4">
-                            <h2 className="text-2xl font-bold text-foreground">8. Changes to Privacy Policy</h2>
+                            <h2 className="text-2xl font-bold text-foreground">8. Policy Evolution</h2>
                             <p>
-                                We may update this privacy policy from time to time. We will notify users of any material changes by posting the new policy on this page.
+                                As digital standards conform, this policy may adapt. Significant modifications will be transparently communicated via this portal.
                             </p>
                         </section>
 
                         <section className="space-y-4">
-                            <h2 className="text-2xl font-bold text-foreground">9. Contact Us</h2>
+                            <h2 className="text-2xl font-bold text-foreground">9. Reach Out</h2>
                             <p>
-                                If you have questions about this privacy policy, please contact us at support@instasave.com
+                                For clarifications regarding your privacy rights, please direct inquiries to legal@instasave.com.
                             </p>
                         </section>
                     </div>

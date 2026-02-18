@@ -22,84 +22,77 @@ export default function DisclaimerPage() {
 
                     <div className="prose prose-invert max-w-none space-y-6 text-muted-foreground leading-relaxed">
                         <section className="space-y-4">
-                            <h2 className="text-2xl font-bold text-foreground">General Disclaimer</h2>
+                            <h2 className="text-2xl font-bold text-foreground">Platform Independence</h2>
                             <p>
-                                InstaSave is an independent third-party tool and is not affiliated with, endorsed by, or sponsored by Instagram, Meta Platforms, Inc., or any of their subsidiaries or affiliates.
+                                InstaSave operates as an autonomous utility. We maintain no affiliation, sponsorship, or partnership with Instagram, Meta Platforms, Inc., or their associated entities. Use of "Instagram" is solely for descriptive purposes.
                             </p>
                         </section>
 
                         <section className="space-y-4">
-                            <h2 className="text-2xl font-bold text-foreground">Content Ownership</h2>
+                            <h2 className="text-2xl font-bold text-foreground">Intellectual Property Rights</h2>
                             <p>
-                                All content downloaded through InstaSave remains the intellectual property of the original creators and copyright holders. We do not host, store, or claim ownership of any content processed through our service.
+                                We fundamentally respect the rights of creators. InstaSave does not host, mirror, or claim rights to any media processed. Ownership resides exclusively with the original content publishers.
                             </p>
                         </section>
 
                         <section className="space-y-4">
-                            <h2 className="text-2xl font-bold text-foreground">Personal Use Only</h2>
+                            <h2 className="text-2xl font-bold text-foreground">Fair Use Policy</h2>
                             <p>
-                                This service is intended for personal, non-commercial use only. Users are solely responsible for ensuring their use of downloaded content complies with:
+                                Our platform is engineered for personal, archival use. By using this tool, you accept full liability for compliance with:
                             </p>
                             <ul className="list-disc list-inside space-y-2 ml-4">
-                                <li>Copyright laws and intellectual property rights</li>
-                                <li>Instagram's Terms of Service</li>
-                                <li>Creator rights and permissions</li>
-                                <li>Applicable local, national, and international laws</li>
+                                <li>International intellectual property regulations</li>
+                                <li>Platform-specific Terms of Service</li>
+                                <li>Creative Commons licenses</li>
+                                <li>Jurisdictional legal statutes</li>
                             </ul>
                         </section>
 
                         <section className="space-y-4">
-                            <h2 className="text-2xl font-bold text-foreground">Copyright Compliance</h2>
+                            <h2 className="text-2xl font-bold text-foreground">Copyright Adherence</h2>
                             <p>
-                                Users must respect creator rights and copyright laws. Downloading and redistributing content without proper authorization may violate copyright laws. InstaSave does not encourage or condone copyright infringement.
+                                Redistribution of downloaded material without explicit consent from the copyright holder is strictly discouraged. We condemn any form of digital piracy or copyright infringement.
                             </p>
                         </section>
 
                         <section className="space-y-4">
-                            <h2 className="text-2xl font-bold text-foreground">No Warranty</h2>
+                            <h2 className="text-2xl font-bold text-foreground">No Representations</h2>
                             <p>
-                                InstaSave is provided "as is" without warranties of any kind, either express or implied. We do not guarantee:
+                                Services are delivered on an "as-is" basis. We offer no guarantees regarding:
                             </p>
                             <ul className="list-disc list-inside space-y-2 ml-4">
-                                <li>Uninterrupted or error-free service</li>
-                                <li>Accuracy or reliability of downloaded content</li>
-                                <li>Compatibility with all devices or browsers</li>
-                                <li>Availability of specific content or features</li>
+                                <li>Continuous uptime or availability</li>
+                                <li>Fidelity of downloaded assets</li>
+                                <li>Cross-platform interoperability</li>
+                                <li>Permanence of specific features</li>
                             </ul>
                         </section>
 
                         <section className="space-y-4">
-                            <h2 className="text-2xl font-bold text-foreground">Limitation of Liability</h2>
+                            <h2 className="text-2xl font-bold text-foreground">Indemnification</h2>
                             <p>
-                                InstaSave and its operators shall not be held liable for any damages, losses, or legal consequences arising from:
-                            </p>
-                            <ul className="list-disc list-inside space-y-2 ml-4">
-                                <li>Use or misuse of our service</li>
-                                <li>Copyright infringement by users</li>
-                                <li>Technical errors or service interruptions</li>
-                                <li>Loss of data or content</li>
-                                <li>Any legal action taken against users</li>
-                            </ul>
-                        </section>
-
-                        <section className="space-y-4">
-                            <h2 className="text-2xl font-bold text-foreground">User Responsibility</h2>
-                            <p>
-                                By using InstaSave, you acknowledge that you are solely responsible for your actions and any consequences that may arise from downloading and using content through our service.
+                                Neither InstaSave nor its developers shall be liable for legal repercussions, data loss, or damages resulting from the use of this utility. User discretion is advised.
                             </p>
                         </section>
 
                         <section className="space-y-4">
-                            <h2 className="text-2xl font-bold text-foreground">DMCA Compliance</h2>
+                            <h2 className="text-2xl font-bold text-foreground">Usage Acknowledgment</h2>
                             <p>
-                                We respect intellectual property rights and respond to valid DMCA takedown notices. If you believe your copyrighted work has been infringed, please contact us at support@instasave.com with detailed information.
+                                Continuing to use InstaSave indicates your understanding that you bear sole responsibility for the ethical and legal usage of downloaded content.
                             </p>
                         </section>
 
                         <section className="space-y-4">
-                            <h2 className="text-2xl font-bold text-foreground">Changes to Disclaimer</h2>
+                            <h2 className="text-2xl font-bold text-foreground">DMCA Protocol</h2>
                             <p>
-                                We reserve the right to modify this disclaimer at any time. Continued use of the service after changes constitutes acceptance of the updated disclaimer.
+                                We respond promptly to valid copyright complaints. If you represent a rights holder and believe your content is being mishandled, please direct formal notices to legal@instasave.com.
+                            </p>
+                        </section>
+
+                        <section className="space-y-4">
+                            <h2 className="text-2xl font-bold text-foreground">Updates</h2>
+                            <p>
+                                This legal text is subject to revision. Please review periodically to stay informed of our liability stances.
                             </p>
                         </section>
                     </div>

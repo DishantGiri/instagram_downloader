@@ -40,28 +40,28 @@ const FAQItem = ({ question, answer }: FAQItemProps) => {
 export function FAQ() {
     const faqs = [
         {
-            question: "Is InstaSave completely free?",
-            answer: "Yes! InstaSave is 100% free to use. You can download as many Instagram videos, reels, and photos as you like without any hidden charges or subscription fees."
+            question: "Is using InstaSave actually free?",
+            answer: "Completely. We believe in open access. There are no paywalls, hidden subscriptions, or premium tiers. Enjoy unlimited downloads for free, forever."
         },
         {
-            question: "Do I need to log in to my Instagram account?",
-            answer: "No, you do not need to log in. We value your privacy and security. Simply paste the link to the public Instagram post you want to download, and our tool handles the rest anonymously."
+            question: "Is an Instagram account required?",
+            answer: "Not at all. We operate independently. You simply need the public link to the content you wish to save. No login credentials are ever requested or stored."
         },
         {
-            question: "Can I download from private accounts?",
-            answer: "Currently, InstaSave supports downloading content only from public Instagram accounts. We respect user privacy settings on the platform."
+            question: "Can I save content from private profiles?",
+            answer: "Our tool maintains strict compliance with privacy standards. Therefore, we can only process content that has been publicly shared by the creator."
         },
         {
-            question: "Is it safe to use this downloader?",
-            answer: "Absolutely. Our service is clean, secure, and does not require you to install any software or extensions. We do not store your download history or personal data."
+            question: "How secure is this platform?",
+            answer: "Your security is paramount. Our architecture runs entirely on the client-side for the safest experience. We do not track your IP or maintain a history of your downloads."
         },
         {
-            question: "Where are the videos saved on my device?",
-            answer: "Downloads are usually saved in the 'Downloads' folder on your PC or Mac. On mobile devices (Android/iOS), they will appear in your 'Files' app or directly in your Gallery/Photos app depending on your browser settings."
+            question: "Where do my files go after downloading?",
+            answer: "Files usually land in your device's default 'Downloads' directory. On mobile, check your 'Files' app or Photo Gallery depending on your system configuration."
         },
         {
-            question: "What file formats do you support?",
-            answer: "We support high-quality MP4 for videos and reels, and high-resolution JPG for photos. We always aim to provide the original quality uploaded by the creator."
+            question: "Which media formats are supported?",
+            answer: "We ensure top-tier compatibility, delivering MP4 files for video content and maintaining the highest available resolution for images (JPG/PNG), exactly as they were uploaded."
         }
     ];
 

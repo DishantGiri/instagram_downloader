@@ -22,29 +22,29 @@ export default function AboutPage() {
                     <section className="text-center space-y-6">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/50 border border-border/50 text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">
                             <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
-                            About InstaSave
+                            The InstaSave Story
                         </div>
                         <h1 className="text-4xl md:text-6xl font-black tracking-tight">
-                            Simplifying Content <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">Access</span>
+                            Redefining Content <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">Archival</span>
                         </h1>
                         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                            We believe that saving content for offline viewing should be simple, fast, and free. No hidden fees, no annoying ads, just pure utility.
+                            We envision a web where saving your favorite moments for offline enjoyment is seamless, efficient, and completely free of clutter.
                         </p>
                     </section>
 
                     {/* Mission Section */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
                         <div className="order-2 md:order-1 space-y-6">
-                            <h2 className="text-3xl font-bold">Our Mission</h2>
+                            <h2 className="text-3xl font-bold">Our Philosophy</h2>
                             <p className="text-muted-foreground leading-relaxed">
-                                InstaSave was built with a single goal: to provide the most reliable and user-friendly tool for downloading Instagram content. We understand the frustration of limited connectivity or simply wanting to keep a personal archive of inspiring content.
+                                InstaSave emerged from a simple need: reliable access to digital inspiration. Whether it's for creative reference, personal archiving, or avoiding buffering on slow connections, we believe you should have control over the content that inspires you.
                             </p>
                             <p className="text-muted-foreground leading-relaxed">
-                                Our team is dedicated to maintaining high-speed servers and constantly updating our algorithms to adapt to platform changes, ensuring you always have access when you need it.
+                                Our engineering team focuses relentlessly on speed and uptime, ensuring that our algorithms stay ahead of platform updates to deliver a consistent experience.
                             </p>
 
                             <ul className="space-y-3">
-                                {["100% Free Forever", "No Registration Needed", "Unlimited Downloads"].map((item, i) => (
+                                {["Truly Cost-Free", "Zero Data Collection", "Uncapped Usage"].map((item, i) => (
                                     <li key={i} className="flex items-center gap-3 font-medium">
                                         <div className="w-6 h-6 rounded-full bg-green-500/10 text-green-500 flex items-center justify-center">
                                             <Check className="w-4 h-4" />
@@ -60,17 +60,17 @@ export default function AboutPage() {
                                 <div className="bg-background/40 backdrop-blur-md p-6 rounded-2xl border border-white/10 text-center space-y-2 hover:border-pink-500/30 transition-colors">
                                     <Users className="w-8 h-8 mx-auto text-pink-500" />
                                     <div className="text-2xl font-bold">1M+</div>
-                                    <div className="text-xs text-muted-foreground uppercase tracking-wide">Users</div>
+                                    <div className="text-xs text-muted-foreground uppercase tracking-wide">Community</div>
                                 </div>
                                 <div className="bg-background/40 backdrop-blur-md p-6 rounded-2xl border border-white/10 text-center space-y-2 hover:border-purple-500/30 transition-colors">
                                     <Clock className="w-8 h-8 mx-auto text-purple-500" />
-                                    <div className="text-2xl font-bold">0.5s</div>
-                                    <div className="text-xs text-muted-foreground uppercase tracking-wide">Avg Speed</div>
+                                    <div className="text-2xl font-bold">Instant</div>
+                                    <div className="text-xs text-muted-foreground uppercase tracking-wide">Processing</div>
                                 </div>
                                 <div className="col-span-2 bg-background/40 backdrop-blur-md p-6 rounded-2xl border border-white/10 text-center space-y-2 hover:border-indigo-500/30 transition-colors">
                                     <Shield className="w-8 h-8 mx-auto text-indigo-500" />
-                                    <div className="text-2xl font-bold">100% Secure</div>
-                                    <div className="text-xs text-muted-foreground uppercase tracking-wide">Privacy First</div>
+                                    <div className="text-2xl font-bold">Encrypted</div>
+                                    <div className="text-xs text-muted-foreground uppercase tracking-wide">Infrastructure</div>
                                 </div>
                             </div>
                         </div>

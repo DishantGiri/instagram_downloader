@@ -15,9 +15,9 @@ export function HowToUse() {
                     <div className="w-16 h-16 mx-auto bg-primary/10 rounded-2xl flex items-center justify-center mb-6 text-primary group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
                         <Copy className="w-8 h-8" />
                     </div>
-                    <h3 className="text-xl font-bold mb-3 text-foreground">Copy URL</h3>
+                    <h3 className="text-xl font-bold mb-3 text-foreground">Grab the Link</h3>
                     <p className="text-muted-foreground leading-relaxed">
-                        Open Instagram app or website, find the video or photo you love, and copy its link.
+                        Navigate to the Instagram post you want to keep. Tap the share options and select 'Copy Link'.
                     </p>
                 </div>
 
@@ -26,9 +26,9 @@ export function HowToUse() {
                     <div className="w-16 h-16 mx-auto bg-purple-400/10 rounded-2xl flex items-center justify-center mb-6 text-purple-400 group-hover:scale-110 group-hover:bg-purple-400 group-hover:text-white transition-all duration-300">
                         <ClipboardPaste className="w-8 h-8" />
                     </div>
-                    <h3 className="text-xl font-bold mb-3 text-foreground">Paste & Proceed</h3>
+                    <h3 className="text-xl font-bold mb-3 text-foreground">Insert & Analyze</h3>
                     <p className="text-muted-foreground leading-relaxed">
-                        Paste the link into the input box above and hit the Proceed button to fetch details.
+                        Paste the URL into our search bar above and let our engine instantly process the media details.
                     </p>
                 </div>
 
@@ -37,9 +37,9 @@ export function HowToUse() {
                     <div className="w-16 h-16 mx-auto bg-blue-500/10 rounded-2xl flex items-center justify-center mb-6 text-blue-500 group-hover:scale-110 group-hover:bg-blue-500 group-hover:text-white transition-all duration-300">
                         <Download className="w-8 h-8" />
                     </div>
-                    <h3 className="text-xl font-bold mb-3 text-foreground">Save Media</h3>
+                    <h3 className="text-xl font-bold mb-3 text-foreground">Download & Keep</h3>
                     <p className="text-muted-foreground leading-relaxed">
-                        Preview the content and click 'Download Now' to save it in high quality instantly.
+                        Review the preview and hit 'Download' to secure the file in high definition on your device.
                     </p>
                 </div>
             </div>

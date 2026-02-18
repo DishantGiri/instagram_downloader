@@ -12,16 +12,18 @@ export const DescriptionSection = () => {
 
             <div className="space-y-6 text-lg md:text-xl text-muted-foreground leading-relaxed">
                 <p>
-                    When someone wants to save Instagram videos, they are usually looking for a quick way to save a funny reel,
-                    or a tutorial or slideshow on their phone or computer. Instagram Downloader acts as a smart Instagram saver that
-                    allows you to download high-quality content, so you are left with a clean video you can watch, edit, or share whenever you like.
+                    Whether you're looking to archive a memorable reel, secure a copy of an inspiring tutorial, or keep a
+                    collection of your favorite moments, our tool provides a seamless solution. InstaSave acts as your
+                    personal media archivist, enabling you to extract high-definition content directly to your device
+                    for offline viewing, editing, or sharing on your own terms.
                 </p>
 
                 <p>
-                    You can still save specific posts within the Instagram app, but Instagram Downloader gives you an upgraded option:
-                    a high-quality file saved directly to your device. This is perfect for building your own collection of
-                    favorite clips—whether that is reels, stories, comedy skits, or educational content—while keeping visuals
-                    crisp and accessible offline.
+                    While the Instagram app allows for basic bookmarking, it doesn't offer true ownership of the file.
+                    Our platform bridges that gap by delivering studio-quality downloads. Perfect for creators building
+                    mood boards, educators saving reference material, or anyone who simply wants to keep their favorite
+                    visuals accessible without an internet connection. Experience the freedom of having your digital
+                    inspiration at your fingertips.
                 </p>
             </div>
         </section>

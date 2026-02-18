@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "InstaSave - Fast Instagram Video Downloader",
-  description: "Download Instagram videos, reels, and stories in high quality for free.",
+  title: "InstaSave - Premium Social Media Archiver",
+  description: "Seamlessly save high-definition Reels, Videos, and Photos from Instagram. Secure, anonymous, and free.",
 };
 
 export default function RootLayout({
