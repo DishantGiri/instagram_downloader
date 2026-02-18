@@ -13,11 +13,10 @@ import { Footer } from "@/components/Footer";
 export default function Page() {
     return (
         <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary selection:text-primary-foreground transition-colors duration-500 overflow-x-hidden flex flex-col">
-            <Header />
+            {/* Header removed for custom download page layout */}
             <Suspense fallback={<div className="flex-grow flex items-center justify-center p-20"><div className="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin"></div></div>}>
                 <DownloadClient />
             </Suspense>
-            <Footer />
         </div>
     );
 }

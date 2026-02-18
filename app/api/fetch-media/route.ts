@@ -46,6 +46,21 @@ export async function POST(request: Request) {
 
         const data = await response.json();
 
+        // Fetch file size if videoUrl exists
+        let fileSize = "Unknown";
+        if (data.videoUrl) {
+            try {
+                const headResponse = await fetch(data.videoUrl, { method: 'HEAD' });
+                const bytes = headResponse.headers.get('content-length');
+                if (bytes) {
+                    const mb = (parseInt(bytes) / (1024 * 1024)).toFixed(1);
+                    fileSize = `${mb} MB`;
+                }
+            } catch (e) {
+                console.error("Failed to get file size", e);
+            }
+        }
+
         // Map the API response to the format expected by the frontend
         const mappedData = {
             thumbnail: data.thumbnailUrl || "",
@@ -55,7 +70,8 @@ export async function POST(request: Request) {
             views: "", // Views aren't clearly present in this response
             downloadUrl: data.videoUrl || "",
             type: data.videoUrl ? "video" : "photo",
-            url: url // Store original URL for the download method
+            url: url, // Store original URL for the download method
+            size: fileSize
         };
 
         return NextResponse.json(mappedData);
