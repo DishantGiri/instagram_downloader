@@ -81,12 +81,12 @@ export function MediaDisplay({ data, loading }: MediaDisplayProps) {
         return (
             <div className="animate-pulse">
                 {/* Skeleton Thumbnail */}
-                <div className="w-full aspect-square bg-gray-200 rounded-lg mb-4" />
+                <div className="w-full aspect-square bg-muted rounded-lg mb-4" />
                 {/* Skeleton Content */}
                 <div className="space-y-3">
-                    <div className="h-4 bg-gray-200 rounded w-3/4" />
-                    <div className="h-4 bg-gray-200 rounded w-1/2" />
-                    <div className="h-10 bg-gray-200 rounded w-full" />
+                    <div className="h-4 bg-muted rounded w-3/4" />
+                    <div className="h-4 bg-muted rounded w-1/2" />
+                    <div className="h-10 bg-secondary rounded w-full" />
                 </div>
             </div>
         );
@@ -100,9 +100,10 @@ export function MediaDisplay({ data, loading }: MediaDisplayProps) {
             <div className="relative w-full aspect-square rounded-lg overflow-hidden bg-black">
                 {data.type === "video" ? (
                     <video
-                        src={data.url}
+                        src={data.downloadUrl}
                         poster={data.thumbnail}
                         controls
+                        controlsList="nodownload"
                         className="w-full h-full object-cover"
                     />
                 ) : (
@@ -115,8 +116,8 @@ export function MediaDisplay({ data, loading }: MediaDisplayProps) {
                                 className="object-cover"
                             />
                         ) : (
-                            <div className="flex items-center justify-center w-full h-full bg-gray-100">
-                                <ImageIcon className="w-12 h-12 text-gray-400" />
+                            <div className="flex items-center justify-center w-full h-full bg-muted">
+                                <ImageIcon className="w-12 h-12 text-muted-foreground" />
                             </div>
                         )}
                     </>
@@ -132,10 +133,10 @@ export function MediaDisplay({ data, loading }: MediaDisplayProps) {
             {/* Media Details & Actions */}
             <div className="space-y-3">
                 <div>
-                    <p className="text-sm text-gray-500 mb-1">Ready to Download</p>
+                    <p className="text-sm text-muted-foreground mb-1">Ready to Download</p>
 
                     {/* Type badge */}
-                    <span className="inline-flex items-center gap-1 text-xs font-medium bg-gray-100 text-gray-700 px-2 py-1 rounded-full">
+                    <span className="inline-flex items-center gap-1 text-xs font-medium bg-secondary text-secondary-foreground px-2 py-1 rounded-full">
                         {data.type === "video" ? (
                             <>
                                 <Film className="w-3 h-3" />
@@ -151,24 +152,31 @@ export function MediaDisplay({ data, loading }: MediaDisplayProps) {
                 </div>
 
                 {data.title && (
-                    <p className="text-sm text-gray-800 line-clamp-2">{data.title}</p>
+                    <div className="bg-secondary/30 p-3 rounded-lg max-h-48 overflow-y-auto border border-white/5">
+                        <p className="text-sm text-foreground whitespace-pre-wrap break-words">{data.title}</p>
+                    </div>
                 )}
 
-                <div className="flex items-center gap-3 text-sm text-gray-600">
-                    <span className="font-medium">{data.author}</span>
+                <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground border-y border-white/10 py-3">
+                    <div className="flex items-center gap-2">
+                        <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-xs">
+                            {data.author.charAt(0).toUpperCase()}
+                        </div>
+                        <span className="font-semibold text-foreground">@{data.author}</span>
+                    </div>
 
                     {data.likes && (
-                        <span className="flex items-center gap-1">
-                            <Heart className="w-3.5 h-3.5 text-red-500" />
-                            {data.likes}
-                        </span>
+                        <div className="flex items-center gap-1.5 ml-auto bg-red-500/10 text-red-500 px-2 py-1 rounded-md">
+                            <Heart className="w-4 h-4 fill-current" />
+                            <span className="font-medium">{data.likes}</span>
+                        </div>
                     )}
 
                     {data.views && (
-                        <span className="flex items-center gap-1">
-                            <Eye className="w-3.5 h-3.5 text-blue-500" />
-                            {data.views}
-                        </span>
+                        <div className="flex items-center gap-1.5 bg-blue-500/10 text-blue-500 px-2 py-1 rounded-md">
+                            <Eye className="w-4 h-4" />
+                            <span className="font-medium">{data.views}</span>
+                        </div>
                     )}
                 </div>
 

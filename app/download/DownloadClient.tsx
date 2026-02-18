@@ -120,10 +120,12 @@ export default function DownloadClient() {
                 </div>
             )}
 
-            {/* Only show display if we have data and not loading (or let MediaDisplay handle loading if preferred, but here we handle spinner separately) */}
+            {/* Only show display if we have data and not loading */}
             {!loading && data && (
-                <div className="relative z-20 w-full mb-12">
-                    <MediaDisplay data={data} loading={false} />
+                <div className="relative z-20 w-full mb-12 flex justify-center px-4">
+                    <div className="w-full max-w-lg bg-white/40 dark:bg-black/40 backdrop-blur-xl rounded-2xl p-6 shadow-2xl border border-white/20 dark:border-white/10 ring-1 ring-white/20">
+                        <MediaDisplay data={data} loading={false} />
+                    </div>
                 </div>
             )}
 
