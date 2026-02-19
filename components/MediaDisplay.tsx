@@ -109,11 +109,10 @@ export function MediaDisplay({ data, loading }: MediaDisplayProps) {
                 ) : (
                     <>
                         {data.thumbnail ? (
-                            <Image
+                            <img
                                 src={data.thumbnail}
                                 alt={data.title || "Instagram media"}
-                                fill
-                                className="object-cover"
+                                className="w-full h-full object-cover"
                             />
                         ) : (
                             <div className="flex items-center justify-center w-full h-full bg-muted">

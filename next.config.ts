@@ -24,6 +24,16 @@ const nextConfig: NextConfig = {
         hostname: '*.cdninstagram.com',
       },
     ],
+    localPatterns: [
+      {
+        pathname: '/api/image/proxy',
+        search: '*',
+      },
+      {
+        pathname: '/**',
+        search: '',
+      },
+    ],
   },
 };
 

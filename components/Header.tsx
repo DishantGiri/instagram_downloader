@@ -24,12 +24,10 @@ export function Header() {
         <header className="w-full py-4 px-6 md:px-12 flex justify-between items-center border-b border-white/5 backdrop-blur-md sticky top-0 bg-background/40 z-50">
             <Link href="/" className="flex items-center gap-3 cursor-pointer group">
                 <div className="relative w-12 h-12 md:w-14 md:h-14 flex items-center justify-center transition-all duration-300 group-hover:scale-105">
-                    <Image
+                    <img
                         src="/logo.png"
                         alt="InstaSave Logo"
-                        width={56}
-                        height={56}
-                        className="object-contain"
+                        className="w-full h-full object-contain"
                     />
                 </div>
                 <div className="text-xl md:text-2xl font-bold tracking-tighter flex items-center gap-1 select-none">

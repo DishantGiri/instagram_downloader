@@ -13,12 +13,10 @@ export function Footer() {
                     <div className="space-y-4">
                         <div className="flex items-center gap-3">
                             <div className="relative w-14 h-14 flex items-center justify-center">
-                                <Image
+                                <img
                                     src="/logo.png"
                                     alt="InstaSave Logo"
-                                    width={56}
-                                    height={56}
-                                    className="object-contain"
+                                    className="w-full h-full object-contain"
                                 />
                             </div>
                             <div className="text-xl font-bold tracking-tighter flex items-center gap-1">

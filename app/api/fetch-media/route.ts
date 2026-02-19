@@ -18,19 +18,24 @@ export async function POST(request: Request) {
             );
         }
 
-        const apiUrl = process.env.API_BASE_URL;
+        const apiHost = process.env.API_HOST;
 
-        if (!apiUrl) {
+        if (!apiHost) {
             return NextResponse.json(
                 { error: 'API configuration missing' },
                 { status: 500 }
             );
         }
 
+        // Endpoint 4: Scrape Instagram Post (returns JSON metadata + image URLs)
+        // Note: Using /api/video/info as /api/video/download returns binary data
+        const apiUrl = `${apiHost}/api/video/info`;
+
         const response = await fetch(apiUrl, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
+                'Accept': 'application/json',
             },
             body: JSON.stringify({ videoUrl: url }),
         });
@@ -38,17 +43,29 @@ export async function POST(request: Request) {
         if (!response.ok) {
             const errorText = await response.text();
             console.error('API Error:', errorText);
+
+            // Try to extract specific error message from X-Error header if available
+            const xError = response.headers.get('X-Error');
+            const errorMessage = xError || 'Failed to fetch media from server';
+
             return NextResponse.json(
-                { error: 'Failed to fetch media from server' },
+                { error: errorMessage },
                 { status: response.status }
             );
         }
 
         const data = await response.json();
 
-        // Fetch file size if videoUrl exists
+        // Determine type and download URL
+        let type = data.mediaType || 'photo';
+        let downloadUrl = '';
         let fileSize = "Unknown";
+
         if (data.videoUrl) {
+            type = 'video';
+            downloadUrl = data.videoUrl;
+
+            // Fetch file size for video
             try {
                 const headResponse = await fetch(data.videoUrl, { method: 'HEAD' });
                 const bytes = headResponse.headers.get('content-length');
@@ -59,19 +76,26 @@ export async function POST(request: Request) {
             } catch (e) {
                 console.error("Failed to get file size", e);
             }
+        } else if (data.imageUrls && data.imageUrls.length > 0) {
+            // Use local proxy for images to avoid CORS
+            const imageUrl = data.imageUrls[0];
+            downloadUrl = `/api/image/proxy?url=${encodeURIComponent(imageUrl)}`;
         }
 
         // Map the API response to the format expected by the frontend
         const mappedData = {
-            thumbnail: data.thumbnailUrl || "",
+            thumbnail: data.thumbnailUrl
+                ? `/api/image/proxy?url=${encodeURIComponent(data.thumbnailUrl)}`
+                : (data.imageUrls?.[0] ? `/api/image/proxy?url=${encodeURIComponent(data.imageUrls[0])}` : ""),
             title: data.description || data.title || "Instagram Post",
-            author: data.authorName?.split('|')[0]?.trim() || "Instagram User",
+            author: data.authorName || "Instagram User",
             likes: data.description?.match(/([\d.]+[KMB]?)\s+likes/i)?.[1] || "",
-            views: "", // Views aren't clearly present in this response
-            downloadUrl: data.videoUrl || "",
-            type: data.videoUrl ? "video" : "photo",
-            url: url, // Store original URL for the download method
-            size: fileSize
+            views: "",
+            downloadUrl: downloadUrl,
+            type: (data.mediaType?.toLowerCase() === 'video' || data.videoUrl) ? 'video' : 'photo',
+            url: url,
+            size: fileSize,
+            imageUrls: data.imageUrls || []
         };
 
         return NextResponse.json(mappedData);
