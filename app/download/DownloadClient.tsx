@@ -226,67 +226,89 @@ export default function DownloadClient() {
                     {/* Main Download Button */}
 
                     {/* Main Download Buttons */}
-                    <div className="flex flex-col gap-4">
-                        {data?.type === 'video' ? (
-                            <button
-                                disabled={isDownloading}
-                                onClick={async () => {
-                                    if (!data?.downloadUrl) return;
-                                    setIsDownloading(true);
-                                    try {
-                                        const response = await fetch(data.downloadUrl);
-                                        const blob = await response.blob();
-                                        const url = window.URL.createObjectURL(blob);
-                                        const a = document.createElement('a');
-                                        a.style.display = 'none';
-                                        a.href = url;
-                                        a.download = `instasave_${data.author || 'video'}.mp4`;
-                                        document.body.appendChild(a);
-                                        a.click();
-                                        window.URL.revokeObjectURL(url);
-                                        document.body.removeChild(a);
-                                    } catch (e) {
-                                        console.error("Download failed:", e);
-                                        window.open(data.downloadUrl, '_blank');
-                                    } finally {
-                                        setIsDownloading(false);
-                                    }
-                                }}
-                                className={`group w-full bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-400 hover:to-purple-500 text-white text-lg font-black py-4 rounded-xl flex items-center justify-center gap-2 transition-all duration-300 shadow-[0_0_20px_rgba(168,85,247,0.3)] hover:shadow-[0_0_30px_rgba(168,85,247,0.5)] transform hover:scale-[1.01] ${isDownloading ? 'opacity-80 cursor-wait' : ''}`}
-                            >
-                                {isDownloading ? (
-                                    <>
-                                        <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                                        </svg>
-                                        DOWNLOADING...
-                                    </>
-                                ) : (
-                                    <>
-                                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
-                                        DOWNLOAD VIDEO
-                                    </>
-                                )}
-                            </button>
-                        ) : (
-                            <>
+                    {/* Main Download Buttons */}
+                    {data && (
+                        <div className="flex flex-col gap-4">
+                            {data.type === 'video' ? (
                                 <button
                                     disabled={isDownloading}
-                                    onClick={handleDownloadAll}
-                                    className="group w-full bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-400 hover:to-purple-500 text-white text-lg font-black py-4 rounded-xl flex items-center justify-center gap-2 transition-all duration-300 shadow-[0_0_20px_rgba(168,85,247,0.3)] hover:shadow-[0_0_30px_rgba(168,85,247,0.5)] transform hover:scale-[1.01] disabled:opacity-50"
+                                    onClick={async () => {
+                                        if (!data?.downloadUrl) return;
+                                        setIsDownloading(true);
+                                        try {
+                                            const response = await fetch(data.downloadUrl);
+                                            const blob = await response.blob();
+                                            const url = window.URL.createObjectURL(blob);
+                                            const a = document.createElement('a');
+                                            a.style.display = 'none';
+                                            a.href = url;
+                                            a.download = `instasave_${data.author || 'video'}.mp4`;
+                                            document.body.appendChild(a);
+                                            a.click();
+                                            window.URL.revokeObjectURL(url);
+                                            document.body.removeChild(a);
+                                        } catch (e) {
+                                            console.error("Download failed:", e);
+                                            window.open(data.downloadUrl, '_blank');
+                                        } finally {
+                                            setIsDownloading(false);
+                                        }
+                                    }}
+                                    className={`group w-full bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-400 hover:to-purple-500 text-white text-lg font-black py-4 rounded-xl flex items-center justify-center gap-2 transition-all duration-300 shadow-[0_0_20px_rgba(168,85,247,0.3)] hover:shadow-[0_0_30px_rgba(168,85,247,0.5)] transform hover:scale-[1.01] ${isDownloading ? 'opacity-80 cursor-wait' : ''}`}
                                 >
-                                    {isDownloading ? "DOWNLOADING..." :
-                                        data?.type === 'video' ? "DOWNLOAD VIDEO" :
-                                            data?.imageUrls && data.imageUrls.length > 1 ? "DOWNLOAD ALL IMAGES" :
-                                                "DOWNLOAD IMAGE"}
+                                    {isDownloading ? (
+                                        <>
+                                            <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                                                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                            </svg>
+                                            DOWNLOADING...
+                                        </>
+                                    ) : (
+                                        <>
+                                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                                            DOWNLOAD VIDEO
+                                        </>
+                                    )}
                                 </button>
-                            </>
-                        )}
-                    </div>
+                            ) : (
+                                <>
+                                    <button
+                                        disabled={isDownloading}
+                                        onClick={handleDownloadAll}
+                                        className="group w-full bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-400 hover:to-purple-500 text-white text-lg font-black py-4 rounded-xl flex items-center justify-center gap-2 transition-all duration-300 shadow-[0_0_20px_rgba(168,85,247,0.3)] hover:shadow-[0_0_30px_rgba(168,85,247,0.5)] transform hover:scale-[1.01] disabled:opacity-50"
+                                    >
+                                        {isDownloading ? "DOWNLOADING..." :
+                                            data.type === 'video' ? "DOWNLOAD VIDEO" :
+                                                data.imageUrls && data.imageUrls.length > 1 ? "DOWNLOAD ALL IMAGES" :
+                                                    "DOWNLOAD IMAGE"}
+                                    </button>
+                                </>
+                            )}
+                        </div>
+                    )}
 
                     {error && (
-                        <p className="text-red-500 text-sm text-center bg-red-500/10 p-2 rounded">{error}</p>
+                        <div className="flex flex-col items-center gap-4 p-6 bg-red-500/10 border border-red-500/20 rounded-xl w-full">
+                            <div className="flex items-center gap-2 text-red-500">
+                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+                                <p className="text-sm font-bold">
+                                    {error.toLowerCase().includes('fetch') || error.toLowerCase().includes('network')
+                                        ? "Connection Failed"
+                                        : "Error Occurred"}
+                                </p>
+                            </div>
+                            <p className="text-red-400 text-xs text-center font-medium max-w-xs">{error}</p>
+                            <button
+                                onClick={() => url && fetchMedia(url)}
+                                className="flex items-center gap-2 px-6 py-2.5 bg-red-500 hover:bg-red-600 text-white rounded-lg transition-all shadow-lg shadow-red-500/20 text-xs font-bold uppercase tracking-wider hover:scale-105 active:scale-95"
+                            >
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                                </svg>
+                                Try Again
+                            </button>
+                        </div>
                     )}
                 </div>
 
